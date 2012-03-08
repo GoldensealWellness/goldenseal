@@ -28,6 +28,14 @@
 	  box-shadow: $horiz $vert $blur $spread $color;
   }
   
+  @mixin no_margin_or_padding() {
+    margin: 0; padding: 0;
+  }
+  
+  @mixin no-bullets() {
+    list-style: none;
+  }
+  
 /* customizations */
 
 body {
@@ -62,7 +70,7 @@ header {
   padding: 20px;
   background-color: $wrapper_background_color;
   @include rounded("");
-  @include shadowed(0,0,15px)
+  @include shadowed(0,0,15px);
 }
 
 #headwrap {
@@ -71,5 +79,70 @@ header {
   margin-right: auto;
 }
 
+/*/---------------------------/*/
+/* Product Listing
+/*-----------------------------*/
 
+.product-listing {
+  @include no-bullets;
+  margin: 2em 0px 0px 0px;
+  padding: 0px;
+  li {
+    @include rounded("",3px);
+    height: 180px;
+    width: 140px;
+    text-align: center;
+    float: left;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #DDD;
+    position: relative;
+    a {
+      display: block;
+      text-decoration: none;
+      color: #111;
+    }
+    a.info {
+      position: absolute;
+      bottom: 0px;
+      right: 0px;
+      padding: 5px;
+      width: 150px;
+      min-height: 60px;
+      background: #FFF image-url('shadow-top.png') 0px -35px repeat-x;
+      border-top: 1px solid white;
+      span { display: block; }
+    }
+  }
+  li:hover {
+    border-color: $header_background_color;
+    a.info {
+      background: $header_background_color image-url('bottom-shine.png') bottom left repeat-x;
+      color: #FFF;
+    }
+  }
+}
 
+ul.thumbnails {
+  @include no_margin_or_padding;
+  list-style: none;
+  li {
+    float: left;
+    margin-right: 5px;
+    padding: 3px;
+    border: 1px solid white;
+    min-height: 50px;
+    width: 50px;
+    position: relative;
+    img {
+      position :absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
+  }
+  li:hover { border-color: #CCC; }
+  li.selected { border-color: #999; }
+}

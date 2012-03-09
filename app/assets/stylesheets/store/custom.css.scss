@@ -113,10 +113,22 @@ aside {
   ul { @include no-bullets(); }
 }
 
-#headwrap {
+#headwrap, footer {
   width:960px;
   margin-left: auto;
   margin-right: auto;
+}
+
+div.footget h1 {
+  min-height:200px;
+  background-color: $header_background_color;
+  @include shadowed(0,0,15px);
+  @include rounded("");
+  color:lighten($layout_background_color,10%);
+  background-image: url('back.svg');
+  background-repeat:repeat-x;
+  padding: 10px;
+  
 }
 
 /*/---------------------------/*/

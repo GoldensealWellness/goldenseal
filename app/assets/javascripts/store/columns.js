@@ -2,7 +2,7 @@ $(document).ready(function(){
   $(function() {
 	  var height = $("#sidebar").height();
 		if (height > 400) {
-			$("#content").css("min-height", height + 10 + 'px');
+			$("#content").css("min-height", height + 50 + 'px');
 		}
   });
   

@@ -1,0 +1,9 @@
+<h1><%= t("homepage.editing_page") %></h1>
+<%= render "spree/shared/error_messages", :target => @homepage %>
+
+<%= form_for [:admin, @homepage] do |f| %>
+  <%= render :partial => 'form', :locals => { :f => f } %>
+   <p class="form-buttons" data-hook="buttons">
+    <%= button t(:update) %>
+   </p>
+<% end %>

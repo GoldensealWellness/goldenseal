@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120220204534) do
+ActiveRecord::Schema.define(:version => 20120315212542) do
 
   create_table "spree_activators", :force => true do |t|
     t.string   "description"
@@ -134,6 +134,12 @@ ActiveRecord::Schema.define(:version => 20120220204534) do
     t.string   "environment", :default => "development"
     t.string   "server",      :default => "test"
     t.boolean  "test_mode",   :default => true
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "spree_homepages", :force => true do |t|
+    t.text     "body"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

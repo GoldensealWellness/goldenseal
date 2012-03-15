@@ -1,0 +1,9 @@
+<div class="clearfix">
+  <div class="left">
+    <%= f.field_container :body do %>
+      <%= f.label :body, t(:body) %><br />
+      <%= f.text_area :body, {:class => 'fullwidth'} %>
+      <%= f.error_message_on :body %>
+    <% end %>
+  </div>
+</div>

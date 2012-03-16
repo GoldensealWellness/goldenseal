@@ -6,4 +6,10 @@ $(document).ready(function() {
                }
        });
   });
+  
+  $(function(){
+    if (window.location.pathname == "/"){
+      $("#breadcrumbs").remove();
+      }
+  });
 });

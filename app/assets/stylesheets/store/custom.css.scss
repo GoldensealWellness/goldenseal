@@ -45,7 +45,7 @@ body {
   line-height: 18px;
   font-size: $base_font_size;
   background-color: $layout_background_color;
-  background-image: url('background.jpg');
+  background-image: url('background1.jpg');
   background-repeat:no-repeat;
 }
 
@@ -146,6 +146,14 @@ footer {
   }
 }
 
+div#home-content {
+  margin-bottom:20px;
+
+  img {
+    padding:5px;
+    @include shadowed(0,0,10px);
+  }
+}
 /*/---------------------------/*/
 /* Product Listing
 /*-----------------------------*/

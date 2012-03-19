@@ -7,17 +7,26 @@ gem 'rails', '3.1.3'
 
 gem 'mysql2'
 
-
+group :production do
+  gem 'unicorn'
+  gem 'foreman'
+  gem 'therubyracer', :platforms => :ruby
+ #only required for 0.70.x or later
+end
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
   gem 'sass-rails'
   gem 'coffee-rails'
-  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer'
 
   gem 'uglifier', '>= 1.0.3'
 end
+
+group :development do
+  gem 'capistrano'
+end
+
+
 
 gem 'jquery-rails'
 

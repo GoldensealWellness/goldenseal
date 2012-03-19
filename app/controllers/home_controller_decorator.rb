@@ -1,6 +1,6 @@
 Spree::HomeController.class_eval do
   def index
-    @taxon = Spree::Taxon.find_by_name!("Featured")
+    @taxon = Spree::Taxon.find_by_name("Featured")
     return unless @taxon
 
     @searcher = Spree::Config.searcher_class.new(params.merge(:taxon => @taxon.id))

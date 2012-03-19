@@ -92,17 +92,17 @@ header {
 }
 
 #content {
-  &.twelve{
-    left:20px;
-  }
-  box-sizing:border-box;
+  float:right;
+  -moz-box-sizing:    border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing:           border-box;
   padding: 20px;
   position: relative;
   background-color: $wrapper_background_color;
   @include rounded("");
   @include shadowed(0,0,15px);
   margin-top: -15px;
-  margin-left:-30px;
+  margin-left:-60px;
   z-index:5;
   min-height:400px;
 }
@@ -124,7 +124,9 @@ aside {
 }
 
 footer {
-  box-sizing:border-box;
+  -moz-box-sizing:    border-box;
+   -webkit-box-sizing: border-box;
+    box-sizing:        border-box;
   padding:20px;
   margin-left: auto;
   margin-right: auto;
@@ -138,7 +140,9 @@ footer {
   div.footget, .footget h1 {
     @include no_margin_or_padding();
     float:left;
-    box-sizing:border-box;
+    -moz-box-sizing:    border-box;
+   -webkit-box-sizing: border-box;
+    box-sizing:        border-box;
     min-height:50px;
     width:50%;
     color:lighten($layout_background_color,10%);

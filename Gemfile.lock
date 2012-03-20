@@ -8,32 +8,7 @@ GIT
       spree_core (~> 1.0.0)
 
 GIT
-  remote: git://github.com/spree/spree_skrill.git
-  revision: 37e6159aa71ec053499e2c7aa9cf799a3b3bdb39
-  ref: 37e6159aa71ec053499e2c7aa9cf799a3b3bdb39
-  specs:
-    spree_skrill (0.70.1)
-      spree_core (>= 0.70.1)
-
-GIT
-  remote: git://github.com/spree/spree_usa_epay.git
-  revision: 0cb57b4afbf1eef6a0ad67a4a1ea506c6418fde1
-  ref: 0cb57b4afbf1eef6a0ad67a4a1ea506c6418fde1
-  specs:
-    spree_usa_epay (0.70.1)
-      savon
-      spree_core (~> 1.0.0.rc1)
-
-GIT
-  remote: git://raw.github.com/spree/spree_editor.git
-  revision: 309d88dfd80d80c478e25f453367889faafaac22
-  specs:
-    spree_editor (1.0.0)
-      spree_core (>= 1.0.0)
-      tinymce-rails (>= 3.4.7.0.1)
-
-GIT
-  remote: https://github.com/spree/spree.git
+  remote: git://github.com/spree/spree.git
   revision: edf11492df383641c4701896c7d340429cb29434
   branch: 1-0-stable
   specs:
@@ -74,6 +49,31 @@ GIT
       spree_core (= 1.0.4.beta)
     spree_sample (1.0.4.beta)
       spree_core (= 1.0.4.beta)
+
+GIT
+  remote: git://github.com/spree/spree_skrill.git
+  revision: 37e6159aa71ec053499e2c7aa9cf799a3b3bdb39
+  ref: 37e6159aa71ec053499e2c7aa9cf799a3b3bdb39
+  specs:
+    spree_skrill (0.70.1)
+      spree_core (>= 0.70.1)
+
+GIT
+  remote: git://github.com/spree/spree_usa_epay.git
+  revision: 0cb57b4afbf1eef6a0ad67a4a1ea506c6418fde1
+  ref: 0cb57b4afbf1eef6a0ad67a4a1ea506c6418fde1
+  specs:
+    spree_usa_epay (0.70.1)
+      savon
+      spree_core (~> 1.0.0.rc1)
+
+GIT
+  remote: git://raw.github.com/spree/spree_editor.git
+  revision: 309d88dfd80d80c478e25f453367889faafaac22
+  specs:
+    spree_editor (1.0.0)
+      spree_core (>= 1.0.0)
+      tinymce-rails (>= 3.4.7.0.1)
 
 GEM
   remote: https://rubygems.org/

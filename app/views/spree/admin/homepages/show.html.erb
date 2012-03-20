@@ -2,3 +2,9 @@
 <%= text_area_tag(:message, @homepage.body,:size => "40", :disabled => true) %>
 </div>
 <div><%= link_to_edit @homepage %></div>
+<div>
+  <%= form_tag '/admin/upload', :multipart => true do %>
+    <%= file_field_tag :file %>
+    <%= submit_tag "Upload File" %>
+  <% end %>
+</div>

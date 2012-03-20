@@ -2,7 +2,7 @@ class Spree::Admin::FilesController < Spree::Admin::ResourceController
   def upload
     if params[:file]
       uploaded_io = params[:file]
-      File.open("#{Rails.root}/public/uploads/#{uploaded_io.original_filename}", 'wb') do |file|
+      File.open("/data/spree/shared/uploads/#{uploaded_io.original_filename}", 'wb') do |file|
         file.write(uploaded_io.read)
       end
       redirect_to admin_homepage_path

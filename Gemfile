@@ -52,7 +52,7 @@ gem 'spree_skrill', :git => 'git://github.com/spree/spree_skrill.git', :ref => '
 
 gem 'spree_static_content', 
         :git => 'git://github.com/joeyjoejoejr/spree_static_content.git', 
-        :branch => 'test' 
+        :branch => '1-0-stable' 
 #gem 'spree_blue_theme', :git => 'git://github.com/spree/spree_blue_theme.git'
 gem 'spree_editor', :git => 'git://raw.github.com/spree/spree_editor.git'
 gem 'tinymce-rails', '>= 3.4.7.0.1'

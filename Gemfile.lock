@@ -1,7 +1,7 @@
 GIT
   remote: git://github.com/joeyjoejoejr/spree_static_content.git
-  revision: 6930e16f20b8554e205dd8510b7166c954031e69
-  branch: test
+  revision: 5e26e0dfc095c3825165e1109488c8552f296613
+  branch: 1-0-stable
   specs:
     spree_static_content (1.0.1)
       spree_auth (~> 1.0.0)

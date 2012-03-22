@@ -66,6 +66,7 @@ header {
 
 #wrapper { 
   width:940px; 
+  position:relative;
   margin-left: auto;
   margin-right: auto;
   //padding: 20px;
@@ -104,6 +105,7 @@ header {
   margin-top: -15px;
   margin-left:-60px;
   z-index:5;
+  width:700px;
   min-height:400px;
 }
 
@@ -113,6 +115,7 @@ aside {
   z-index:1;
   margin-right:0;
   padding:10px;
+  width:220px;
   @include border-left-radius(5px);
   ul { @include no-bullets(); }
 }

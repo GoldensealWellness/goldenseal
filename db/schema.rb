@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120319192615) do
+ActiveRecord::Schema.define(:version => 20120322042348) do
 
   create_table "spree_activators", :force => true do |t|
     t.string   "description"
@@ -66,6 +66,12 @@ ActiveRecord::Schema.define(:version => 20120319192615) do
   end
 
   add_index "spree_adjustments", ["adjustable_id"], :name => "index_adjustments_on_order_id"
+
+  create_table "spree_assemblies_parts", :id => false, :force => true do |t|
+    t.integer "assembly_id",                :null => false
+    t.integer "part_id",                    :null => false
+    t.integer "count",       :default => 1, :null => false
+  end
 
   create_table "spree_assets", :force => true do |t|
     t.integer  "viewable_id"
@@ -347,7 +353,7 @@ ActiveRecord::Schema.define(:version => 20120319192615) do
   add_index "spree_product_scopes", ["product_group_id"], :name => "index_product_scopes_on_product_group_id"
 
   create_table "spree_products", :force => true do |t|
-    t.string   "name",                 :default => "", :null => false
+    t.string   "name",                 :default => "",    :null => false
     t.text     "description"
     t.datetime "available_on"
     t.datetime "deleted_at"
@@ -358,7 +364,9 @@ ActiveRecord::Schema.define(:version => 20120319192615) do
     t.integer  "shipping_category_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "count_on_hand",        :default => 0,  :null => false
+    t.integer  "count_on_hand",        :default => 0,     :null => false
+    t.boolean  "can_be_part",          :default => false, :null => false
+    t.boolean  "individual_sale",      :default => true,  :null => false
   end
 
   add_index "spree_products", ["available_on"], :name => "index_products_on_available_on"

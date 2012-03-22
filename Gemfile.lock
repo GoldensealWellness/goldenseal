@@ -8,6 +8,14 @@ GIT
       spree_core (~> 1.0.0)
 
 GIT
+  remote: git://github.com/spree/spree-product-assembly.git
+  revision: dd296fb3413f493336cdacc1b3dda25ffc71f071
+  branch: 1-0-stable
+  specs:
+    spree_product_assembly (1.0.0)
+      spree (~> 1.0)
+
+GIT
   remote: git://github.com/spree/spree.git
   revision: edf11492df383641c4701896c7d340429cb29434
   branch: 1-0-stable
@@ -288,6 +296,7 @@ DEPENDENCIES
   sass-rails (= 3.1.5)
   spree!
   spree_editor!
+  spree_product_assembly!
   spree_skrill!
   spree_static_content!
   spree_usa_epay!

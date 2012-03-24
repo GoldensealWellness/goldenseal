@@ -2,6 +2,7 @@ Goldenseal::Application.routes.draw do
   # Mount Spree's routes
   mount Spree::Core::Engine, :at => '/'
   
+  
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -62,7 +63,8 @@ Goldenseal::Application.routes.draw do
 end
 
 Spree::Core::Engine.routes.append do
-
+  resource :search
+  
   namespace :admin do
     resource :homepage
     match "/upload" => "files#upload"

@@ -277,3 +277,16 @@ ul.ui-autocomplete {
     }
   }
 } 
+
+div#checkout {
+  .sixteen {
+    width: 880px;
+  }
+  
+  .omega {
+    &.four{
+      
+      width: 170px;
+    }
+  }
+}

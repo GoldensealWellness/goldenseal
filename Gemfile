@@ -59,4 +59,5 @@ gem 'spree_product_assembly',
         #:path => '~/railsprojects/spree-product-assembly'
         :git => 'git://github.com/spree/spree-product-assembly.git'
 gem 'tinymce-rails', '>= 3.4.7.0.1'
-
+gem 'spree_gateway', 
+        :git => 'git://github.com/spree/spree_gateway.git'

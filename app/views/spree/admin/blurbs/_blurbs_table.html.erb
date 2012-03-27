@@ -1,0 +1,21 @@
+<table class="index">
+  <thead>
+  	<tr>
+  	  <th>Name</th>
+  	</tr>
+  </thead>
+  <tbody>
+    <% blurbs.each do |blurb| %>
+      <% if blurb.product_id == @product.id %>
+      <tr>
+        <td><%= blurb.name %></td>
+  	    <td class="actions">
+          <%= link_to_with_icon 'edit', t(:edit), edit_admin_product_blurb_url(@product, blurb), :class => 'edit' %> &nbsp;  
+          <%= link_to_with_icon 'delete', t(:delete), admin_product_blurb_url(@product, blurb), 
+                                        :method => :delete, :class => 'delete', :confirm => 'Delete Blurb?' %>
+  	    </td>        
+      </tr>
+      <% end %>
+    <% end %>
+  </tbody>
+</table>

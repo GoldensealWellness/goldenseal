@@ -1,0 +1,15 @@
+<%= render :partial => 'spree/admin/shared/product_sub_menu' %>
+
+<%= render :partial => 'spree/admin/shared/product_tabs', :locals => {:current => "Blurbs"} %>
+
+<div class='toolbar'>
+  <ul class='actions'>
+    <li id="new_blurb_link">
+      <%= button_link_to "New Blurb", new_admin_product_blurb_url, {:icon => 'add'} %>
+    </li>
+  </ul>
+  <br class='clear' />
+</div>
+<div id="product_parts">
+  <%= render :partial => "blurbs_table", :locals => {:blurbs => @blurbs} %>
+</div>

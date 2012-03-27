@@ -5,5 +5,6 @@
  *= require jquery.formalize
  *= require store/screen
  *= require store/custom
+ *= require store/popup
 */
 

@@ -1,0 +1,16 @@
+<div id= "popup-div">
+  <ul id="popup-nav">
+    <% @product.blurbs.each do |blurb| %>
+      <li id="<%= blurb.name.gsub(/\s+/, '').downcase %>-button" class="pop-button">
+        <%= blurb.name %>
+      </li>
+    <% end %>
+  </ul>
+  <% @product.blurbs.each do |blurb| %>
+    <div id= "<%= blurb.name.gsub(/\s+/, '').downcase %>-div" class="popupContact">
+      <a class="popupContactClose">x</a> 
+      <%= blurb.body.html_safe %>
+    </div>
+  <% end %>
+</div>
+<div id="pop-back"></div>

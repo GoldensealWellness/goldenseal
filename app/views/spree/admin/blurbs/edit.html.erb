@@ -1,0 +1,9 @@
+<h1>Edit Blurb</h1>
+<%= render "spree/shared/error_messages", :target => @blurb %>
+
+<%= form_for [:admin, :product, @blurb] do |f| %>
+  <%= render :partial => 'form', :locals => { :f => f } %>
+  <p class="form-buttons" data-hook="buttons">
+    <%= button t(:update) %>
+  </p>
+<% end %>

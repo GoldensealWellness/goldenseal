@@ -68,6 +68,9 @@ Spree::Core::Engine.routes.append do
   namespace :admin do
     resource :homepage
     match "/upload" => "files#upload"
+    resources :products do
+      resources :blurbs  
+    end
   end
 
 end

@@ -54,12 +54,14 @@ div.container { width:100%;
 }
 
 header {
-  background-color: $header_background_color;
-  background-image: url('back.svg');
-  background-repeat:repeat-x;
+  //background-color: $header_background_color;
+  //background-image: url('back.svg');
+  //background-repeat:repeat-x;
   height: $header_height;
   width: 100%;
-	@include shadowed(0, 1px, 15px);
+  &.row{
+    margin-bottom: 30px;
+  }
 	/*-moz-box-shadow: 0 5px 15px black;
 	-webkit-box-shadow: 0 5px 15px black;
 	box-shadow: 0 5px 15px black;*/
@@ -149,7 +151,7 @@ footer {
     box-sizing:        border-box;
     min-height:50px;
     width:50%;
-    color:lighten($layout_background_color,10%);
+    color: $layout_background_color;
     //padding: 10px;
   }
 }
@@ -244,7 +246,13 @@ div#cart-form div.five {
   }
 }
 
+nav#top-nav-bar {
+  @include shadowed(0, 0, 5px)
+}
+
 figure#logo {
+  position:absolute;
+  top:35px;
   padding-top:10px;
   a {
     margin-left: 50px;
@@ -289,4 +297,15 @@ div#checkout {
       width: 170px;
     }
   }
+}
+
+select#taxon{
+  font-family:sans-serif;
+  font-size:140%;
+}
+
+li#search-bar input {
+  font-family:sans-serif;
+  font-size:140%;
+  vertical-align:top;
 }

@@ -30,7 +30,7 @@ function centerPopup(){
   //center
   
   $(currentDiv).css({
-    "position":"absolute",
+    //"position":"absolute",
     "top": windowHeight/2-popupHeight/2,  
     "left": windowWidth/2-popupWidth/2  
   })

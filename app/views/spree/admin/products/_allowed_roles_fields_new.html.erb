@@ -1,0 +1,8 @@
+<div class="field left">
+    <h2>Visible Roles</h2>
+    <%= hidden_field_tag "product[role_ids][]", nil %>
+    <% Spree::Role.all.each do |role| %>
+      <%= check_box_tag "product[role_ids][]", role.id, true , id: dom_id(role) %>
+      <%= label_tag dom_id(role), role.name %><br>
+    <% end %>
+</div>

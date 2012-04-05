@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120326161531) do
+ActiveRecord::Schema.define(:version => 20120403202542) do
 
   create_table "spree_activators", :force => true do |t|
     t.string   "description"
@@ -85,10 +85,18 @@ ActiveRecord::Schema.define(:version => 20120326161531) do
     t.string   "type",                    :limit => 75
     t.datetime "attachment_updated_at"
     t.text     "alt"
+    t.integer  "attachment_file_size"
   end
 
   add_index "spree_assets", ["viewable_id"], :name => "index_assets_on_viewable_id"
   add_index "spree_assets", ["viewable_type", "type"], :name => "index_assets_on_viewable_type_and_type"
+
+  create_table "spree_blogs", :force => true do |t|
+    t.string   "name"
+    t.string   "permalink"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "spree_blurbs", :force => true do |t|
     t.string   "name"
@@ -306,6 +314,37 @@ ActiveRecord::Schema.define(:version => 20120326161531) do
   add_index "spree_pending_promotions", ["promotion_id"], :name => "index_spree_pending_promotions_on_promotion_id"
   add_index "spree_pending_promotions", ["user_id"], :name => "index_spree_pending_promotions_on_user_id"
 
+  create_table "spree_post_categories", :force => true do |t|
+    t.string   "name"
+    t.string   "permalink"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "spree_post_categories_posts", :id => false, :force => true do |t|
+    t.integer "post_id"
+    t.integer "post_category_id"
+  end
+
+  create_table "spree_post_products", :force => true do |t|
+    t.integer "post_id"
+    t.integer "product_id"
+    t.integer "position"
+  end
+
+  create_table "spree_posts", :force => true do |t|
+    t.string   "title"
+    t.string   "path"
+    t.string   "teaser"
+    t.datetime "posted_at"
+    t.text     "body"
+    t.string   "author"
+    t.boolean  "live",       :default => true
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "blog_id"
+  end
+
   create_table "spree_preferences", :force => true do |t|
     t.string   "name"
     t.integer  "owner_id"
@@ -318,6 +357,15 @@ ActiveRecord::Schema.define(:version => 20120326161531) do
   end
 
   add_index "spree_preferences", ["key"], :name => "index_spree_preferences_on_key", :unique => true
+
+  create_table "spree_product_allowed_roles", :id => false, :force => true do |t|
+    t.integer  "product_id"
+    t.integer  "role_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "spree_product_allowed_roles", ["product_id", "role_id"], :name => "index_spree_product_allowed_roles_on_product_id_and_role_id"
 
   create_table "spree_product_groups", :force => true do |t|
     t.string "name"
@@ -361,7 +409,7 @@ ActiveRecord::Schema.define(:version => 20120326161531) do
   add_index "spree_product_scopes", ["product_group_id"], :name => "index_product_scopes_on_product_group_id"
 
   create_table "spree_products", :force => true do |t|
-    t.string   "name",                 :default => "",    :null => false
+    t.string   "name",                    :default => "",    :null => false
     t.text     "description"
     t.datetime "available_on"
     t.datetime "deleted_at"
@@ -372,15 +420,17 @@ ActiveRecord::Schema.define(:version => 20120326161531) do
     t.integer  "shipping_category_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "count_on_hand",        :default => 0,     :null => false
-    t.boolean  "can_be_part",          :default => false, :null => false
-    t.boolean  "individual_sale",      :default => true,  :null => false
+    t.integer  "count_on_hand",           :default => 0,     :null => false
+    t.boolean  "can_be_part",             :default => false, :null => false
+    t.boolean  "individual_sale",         :default => true,  :null => false
+    t.integer  "product_allowed_role_id"
   end
 
   add_index "spree_products", ["available_on"], :name => "index_products_on_available_on"
   add_index "spree_products", ["deleted_at"], :name => "index_products_on_deleted_at"
   add_index "spree_products", ["name"], :name => "index_products_on_name"
   add_index "spree_products", ["permalink"], :name => "index_products_on_permalink"
+  add_index "spree_products", ["product_allowed_role_id"], :name => "index_spree_products_on_product_allowed_role_id"
 
   create_table "spree_products_promotion_rules", :id => false, :force => true do |t|
     t.integer "product_id"
@@ -459,8 +509,11 @@ ActiveRecord::Schema.define(:version => 20120326161531) do
   end
 
   create_table "spree_roles", :force => true do |t|
-    t.string "name"
+    t.string  "name"
+    t.integer "product_allowed_role_id"
   end
+
+  add_index "spree_roles", ["product_allowed_role_id"], :name => "index_spree_roles_on_product_allowed_role_id"
 
   create_table "spree_roles_users", :id => false, :force => true do |t|
     t.integer "role_id"
@@ -654,6 +707,23 @@ ActiveRecord::Schema.define(:version => 20120326161531) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "default_tax", :default => false
+  end
+
+  create_table "taggings", :force => true do |t|
+    t.integer  "tag_id"
+    t.integer  "taggable_id"
+    t.string   "taggable_type"
+    t.integer  "tagger_id"
+    t.string   "tagger_type"
+    t.string   "context"
+    t.datetime "created_at"
+  end
+
+  add_index "taggings", ["tag_id"], :name => "index_taggings_on_tag_id"
+  add_index "taggings", ["taggable_id", "taggable_type", "context"], :name => "index_taggings_on_taggable_id_and_taggable_type_and_context"
+
+  create_table "tags", :force => true do |t|
+    t.string "name"
   end
 
 end

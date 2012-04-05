@@ -61,3 +61,5 @@ gem 'spree_product_assembly',
 gem 'tinymce-rails', '>= 3.4.7.0.1'
 gem 'spree_gateway', 
         :git => 'git://github.com/spree/spree_gateway.git'
+gem 'spree_essentials', '~> 0.4.0.rc'
+gem 'spree_essential_blog', :git => 'git://github.com/citrus/spree_essential_blog.git'

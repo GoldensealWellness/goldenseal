@@ -1,0 +1,31 @@
+<%= render :partial => 'spree/admin/shared/user_sub_menu' %>
+
+<div class="toolbar">
+  <ul class="actions">
+    <li>
+      <p><%= button_link_to 'New Role', new_object_url, :icon => 'add', :id => 'admin_new_role_link' %></p>
+    </li>
+  </ul>
+  <br class="clear" />
+</div>
+
+<h1>Listing Roles</h1>
+
+<table class="index" id="listing_roles">
+  <thead>
+    <tr>
+      <th>Roles</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @roles.each do |role|%>
+      <tr id="<%= dom_id role %>">
+        <td width="350px" class='role_name'><%=link_to role.name, object_url(role) %></td>
+        <td>
+          <%= link_to_delete role %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

@@ -1,0 +1,19 @@
+<%= render :partial => 'spree/admin/shared/user_sub_menu' %>
+
+<h1><%= @role.name.capitalize %> Users</h1>
+<div>
+  <table class="index" id="listing_users" data-hook>
+  <thead>
+    <tr>
+      <th>User</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @role.users.each do |user|%>
+      <tr id="<%= dom_id user %>" data-hook="admin_users_index_rows">
+        <td width="350px" class='user_email'><%=link_to user.email, admin_user_url(user) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<div>

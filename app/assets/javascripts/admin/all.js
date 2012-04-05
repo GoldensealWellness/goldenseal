@@ -13,3 +13,4 @@
 //= require_tree .
 //= require admin/spree_editor
 //= require admin/product_assembly
+//= require admin/spree_essentials

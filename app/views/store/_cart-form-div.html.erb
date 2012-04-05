@@ -1,3 +1,17 @@
 <div id='cart-form' data-hook='new_cart_form'>
-  <%= render :partial => 'spree/products/cart_form' %>
+  <% if current_user && (current_user.roles & @product.roles) || @product.all_roles? %>
+    <%= render :partial => 'spree/products/cart_form' %> 
+  <% else %>
+    <div id="no-cart">
+    <p>This product is only available to the following users:</p>
+      <ul>
+        <% @product.roles.each do |role| %>
+          <% unless role.name == "admin" %>
+            <li><%= role.name.capitalize.pluralize %></li>
+          <% end %>
+        <% end %>
+      </ul>
+      <%= link_to "Sign in or Sign up", login_path %> to add to cart %> 
+    </div>
+  <% end %>
 </div>

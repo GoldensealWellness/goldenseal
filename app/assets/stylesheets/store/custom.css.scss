@@ -309,3 +309,15 @@ li#search-bar input {
   font-size:140%;
   vertical-align:top;
 }
+
+div.post-archive h4.year {
+background-color: $link_text_color; 
+  a:hover {
+    background-color: $link_hover_color;
+  }
+}
+
+#no-cart {
+  background-color: lighten($header_background_color, 60%);
+  padding:5px;
+}

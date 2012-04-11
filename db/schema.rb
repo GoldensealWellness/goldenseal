@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120403202542) do
+ActiveRecord::Schema.define(:version => 20120411130728) do
 
   create_table "spree_activators", :force => true do |t|
     t.string   "description"
@@ -238,6 +238,13 @@ ActiveRecord::Schema.define(:version => 20120403202542) do
   add_index "spree_option_values_variants", ["variant_id", "option_value_id"], :name => "index_option_values_variants_on_variant_id_and_option_value_id"
   add_index "spree_option_values_variants", ["variant_id"], :name => "index_option_values_variants_on_variant_id"
 
+  create_table "spree_order_referrals", :id => false, :force => true do |t|
+    t.integer  "referral_id"
+    t.boolean  "order_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "spree_orders", :force => true do |t|
     t.string   "number",               :limit => 15
     t.decimal  "item_total",                         :precision => 8, :scale => 2, :default => 0.0, :null => false
@@ -257,6 +264,7 @@ ActiveRecord::Schema.define(:version => 20120403202542) do
     t.string   "payment_state"
     t.string   "email"
     t.text     "special_instructions"
+    t.integer  "referral_id"
   end
 
   add_index "spree_orders", ["number"], :name => "index_orders_on_number"
@@ -494,6 +502,13 @@ ActiveRecord::Schema.define(:version => 20120403202542) do
 
   create_table "spree_prototypes", :force => true do |t|
     t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "spree_referrals", :force => true do |t|
+    t.string   "name"
+    t.boolean  "shown"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

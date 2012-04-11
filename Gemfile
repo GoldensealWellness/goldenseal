@@ -24,6 +24,7 @@ end
 
 group :development do
   gem 'capistrano'
+  gem 'ruby-debug19', :require => 'ruby-debug'
 end
 
 
@@ -43,7 +44,8 @@ gem 'jquery-rails'
 # gem 'capistrano'
 
 # To use debugger
-# gem 'ruby-debug19', :require => 'ruby-debug'
+
+
 gem 'spree',
         :git => 'git://github.com/spree/spree.git',
         :branch => '1-0-stable'

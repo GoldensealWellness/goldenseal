@@ -1,0 +1,37 @@
+<%= render :partial => 'spree/admin/shared/order_sub_menu' %>
+
+<div class="toolbar">
+  <ul class="actions">
+    <li>
+      <p><%= button_link_to 'New Refferal Source', new_object_url, :icon => 'add', :id => 'admin_new_refferal_link' %></p>
+    </li>
+  </ul>
+  <br class="clear" />
+</div>
+
+<h1>Listing referrals</h1>
+
+<table class="index" id="listing_referrals">
+  <thead>
+    <tr>
+      <th><%= sort_link @search, :name, "Refferal Sources" %></th>
+      <th><%= sort_link @search, :shown, "Shown?" %></th>
+      <th><%= sort_link @search, :num_orders, "Number of Orders" %></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @referrals.each do |referral|%>
+      <tr id="<%= dom_id referral %>">
+        <td width="350px" class='referral_name'><%=link_to referral.name, object_url(referral) %></td>
+        <td class='referral_shown'><%= check_box_tag :shown, "#", referral.shown?, 
+                                    :disabled => true %></td>
+        <td class='refferal_count'><%= referral.num_orders %></td>
+        <td class= "actions">
+          <%= link_to_edit_url edit_admin_referral_path(referral), :title => "admin_edit_#{dom_id(referral)}" %>
+          <%= link_to_delete referral %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

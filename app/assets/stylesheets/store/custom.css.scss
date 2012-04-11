@@ -39,6 +39,9 @@
   }
   
 /* customizations */
+.hidden {
+  display:none;
+}
 
 body {
   font-family: $ff_base;

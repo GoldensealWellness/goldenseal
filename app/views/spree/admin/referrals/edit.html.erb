@@ -1,0 +1,15 @@
+<%= render :partial => 'spree/admin/shared/order_sub_menu' %>
+
+<div>
+  <%= render :partial => 'spree/shared/error_messages', :locals => { :target => @referral } %>
+  <h1>Edit Referral</h1>
+</div>
+
+<div>
+  <%= form_for [:admin, @referral] do |f| %>
+    <%= render :partial => 'form', :locals => { :f => f } %>
+    <div>
+      <%= render :partial => 'spree/admin/shared/edit_resource_links' %>
+    </div>
+  <% end %>
+</div>

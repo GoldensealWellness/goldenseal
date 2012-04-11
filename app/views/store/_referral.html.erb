@@ -1,0 +1,8 @@
+<div id="referral_form">
+  How did you hear about us?
+  <% other = Spree::Referral.new(:name => "Other(specify)"); other.id = 0 %>
+  <% ref_names = Spree::Referral.find_all_by_shown(true) << other %>
+  <%= collection_select(:order, :referral, ref_names, :id, :name, :include_blank => true) %>
+  <%= label_tag :other %>
+  <%= text_field_tag :other %>
+</div>

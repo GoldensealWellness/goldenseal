@@ -1,0 +1,23 @@
+<%= render :partial => 'spree/admin/shared/order_sub_menu' %>
+
+<h1><%= @referral.name.capitalize %> Refferal</h1>
+<div>
+  <table class="index" id="listing_orders" data-hook>
+  <thead>
+    <tr>
+      <th>order</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @referral.orders.each do |order|%>
+      <tr id="<%= dom_id order %>" data-hook="admin_orders_index_rows">
+        <td width="350px" class='order_email'><%=link_to order.number, admin_order_url(order) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<div>
+<p>
+  <%= link_to_edit @referral, :class => 'edit_referral' %> <%= t(:or) %>
+  <%= link_to t(:back), collection_url %>
+</p>

@@ -1,0 +1,10 @@
+<%= f.field_container :name do %>
+  <%= f.label :name, "Name" %>
+  <%= f.text_field :name %>
+  <%= error_message_on :refferal, :name %>  
+<% end %>
+<%= f.field_container :shown do %>
+  <%= f.label :shown, "Shown?" %>
+  <%= f.check_box :shown %>
+  <%= error_message_on :refferal, :shown %>  
+<% end %>

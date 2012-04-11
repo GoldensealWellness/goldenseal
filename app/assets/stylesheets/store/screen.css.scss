@@ -305,18 +305,25 @@ mark {background-color: $link_text_color; color: $layout_background_color; font-
   nav#taxonomies {
     .taxonomy-root {
       text-transform: uppercase;
+      margin-top: 10px;
       margin-bottom: 5px;
       font-size: $main_navigation_header_font_size;
     }
 
     .taxons-list {
       padding-left: 20px;
-      margin-bottom: 20px;
+      //margin-bottom: 20px;
       list-style: none;
 
       li {
         a {
-          font-size: $main_navigation_font_size
+          font-size: $main_navigation_font_size;
+          &.current {
+            background-color:darken($layout_background_color, 10%);
+            padding-left:10px;
+            padding-right:10px;
+            margin-left:-10px;
+          }
         }
       }
     }
@@ -664,6 +671,14 @@ mark {background-color: $link_text_color; color: $layout_background_color; font-
 
   #order_details, #order_summary {
     padding: 0;
+    
+    .sixteen {
+      width: 880px; 
+    }
+    
+    .four:last-child {
+      width:160px;
+    }
 
     div:last-child {
       margin-left: -1px;

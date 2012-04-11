@@ -1,0 +1,6 @@
+<nav id="taxonomies" class="sidebar-item" data-hook>
+  <% get_taxonomies.each do |taxonomy| %>
+    <h6 class='taxonomy-root'><%= t(:shop_by_taxonomy, :taxonomy => taxonomy.name.singularize) %></h6>
+    <%= my_taxons_tree(taxonomy.root, @taxon) %>
+  <% end %>
+</nav>

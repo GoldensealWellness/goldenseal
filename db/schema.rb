@@ -238,13 +238,6 @@ ActiveRecord::Schema.define(:version => 20120411130728) do
   add_index "spree_option_values_variants", ["variant_id", "option_value_id"], :name => "index_option_values_variants_on_variant_id_and_option_value_id"
   add_index "spree_option_values_variants", ["variant_id"], :name => "index_option_values_variants_on_variant_id"
 
-  create_table "spree_order_referrals", :id => false, :force => true do |t|
-    t.integer  "referral_id"
-    t.boolean  "order_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "spree_orders", :force => true do |t|
     t.string   "number",               :limit => 15
     t.decimal  "item_total",                         :precision => 8, :scale => 2, :default => 0.0, :null => false

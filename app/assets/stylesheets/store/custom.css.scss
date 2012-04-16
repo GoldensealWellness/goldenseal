@@ -53,8 +53,7 @@ body {
   background-repeat:no-repeat;
 }
 
-div.container { width:100%;
-}
+div.container { width:100%; }
 
 header {
   //background-color: $header_background_color;
@@ -63,40 +62,56 @@ header {
   height: $header_height;
   width: 100%;
   &.row{
-    margin-bottom: 30px;
+    margin-bottom: 120px;
   }
 	/*-moz-box-shadow: 0 5px 15px black;
 	-webkit-box-shadow: 0 5px 15px black;
 	box-shadow: 0 5px 15px black;*/
+	
+	#main-nav-wrap {
+    position:absolute;
+    top:14px;
+    background-color:lighten($header_background_color, 10%);
+    width:100%;
+    left:0px
+    
+  }
+  nav ul#main-nav-bar {
+    //float:left;
+    padding:0;
+    margin-right:auto;
+    margin-left:auto;
+    width:940px;
+    //@include border-top-radius(3px);
+    
+    li {
+      //position: relative;
+      //background-color: white;
+      //@include border-top-radius(3px);
+      float:left;
+      margin-left: 4px;
+      margin-bottom:0;
+      padding: 5px;
+      //padding-bottom: 13px;
+      //z-index:1;
+      }
+    //li.selected { z-index:10; }
+    
+  }
 }
 
 #wrapper { 
   width:940px; 
   position:relative;
+  down:100px;
   margin-left: auto;
   margin-right: auto;
   //padding: 20px;
   //background-color: $wrapper_background_color;
   //@include rounded("");
   //@include shadowed(0,0,15px);
-  nav ul#main-nav-bar {
-    float:right;
-    padding-right:0;
-    margin-right:0;
-    li {
-      position: relative;
-      background-color: white;
-      @include border-top-radius(3px);
-      margin-left: 4px;
-      margin-bottom:0;
-      padding: 5px;
-      padding-bottom: 13px;
-      z-index:1;
-    }
-    li.selected { z-index:10; }
-    
-  }
 }
+
 
 #content {
   float:right;
@@ -132,6 +147,16 @@ aside {
   margin-right: auto;
 }
 
+#cart_buttons {
+  margin-top: 15px;
+  float:right;
+}
+
+#subtotal{
+  float:right;
+  margin-right:10px;
+}
+
 footer {
   -moz-box-sizing:    border-box;
    -webkit-box-sizing: border-box;
@@ -146,16 +171,33 @@ footer {
   background-repeat:repeat-x;
   margin-right:0;
 
-  div.footget, .footget h1 {
-    @include no_margin_or_padding();
-    float:left;
-    -moz-box-sizing:    border-box;
-   -webkit-box-sizing: border-box;
-    box-sizing:        border-box;
-    min-height:50px;
-    width:50%;
-    color: $layout_background_color;
-    //padding: 10px;
+  div.footget {
+    h1,h2,h3,p,a,ul,li{
+      font-size:100%;
+      margin:0;
+      padding:0;
+      color:$layout_background_color; 
+      
+    }
+    
+    h2 {
+      border-bottom:1px solid $layout_background_color;
+      width:50%;
+      font-size:120%;
+      margin-top:10px;
+      margin-bottom:10px;
+      line-height:20px;
+    }
+    
+      @include no_margin_or_padding();
+      float:left;
+      -moz-box-sizing:    border-box;
+     -webkit-box-sizing: border-box;
+      box-sizing:        border-box;
+      min-height:50px;
+      width:33%;
+      color: $layout_background_color;
+      //padding: 10px;
   }
 }
 
@@ -255,7 +297,7 @@ nav#top-nav-bar {
 
 figure#logo {
   position:absolute;
-  top:35px;
+  top:60px;
   padding-top:10px;
   a {
     margin-left: 50px;

@@ -1,6 +1,38 @@
 <div id="footwrap">
   <footer class="row" data-hook>
-    <div class="footget"><h1>TEST!!!!</h1></div>
-    <div class="footget"><h1>ALSO A TEST!!</h1></div>
+    <div class="footget first">
+      <h2>Company Information</h2>
+      <ul>
+        <li><%= link_to "About Goldenseal Wellness", "/about" %></li>
+        <li><%= link_to "Store Locator", '#' %></li>
+        <li><%= link_to "Contact Us", "/contact" %></li>
+        <li><%= link_to "Help", "/help" %></li>
+      </ul>
+    </div>
+    
+    <div class="footget">
+      <h2>Our Partners</h2>
+      <ul>
+        <li><%= link_to "Carolina Partners", "http://carolinapartners.com" %></li>
+        <li><%= link_to "Dr Kivette Parkes","http://drparkes.com" %></li>
+        <li><%= link_to "La Bedouine", "http://www.labedouine.com" %></li>
+      </ul>
+    </div>
+    <div class="footget">
+      <h2>My Account</h2>
+        <ul id="login-nav-bottom">
+          <% if current_user %>
+            <li><%= t(:logged_in_as) %>: <%= current_user.email %></li>
+            <li><%= link_to t(:account), spree.edit_user_path(current_user) %></li>
+            <li><%= link_to t(:logout), spree.destroy_user_session_path %></li>
+          <% else %>
+            <li><%= link_to "Sign in or Sign up", spree.login_path %></li>
+          <% end %>
+        </ul>
+      <h2>Connect With Us</h2>
+        <ul>
+          <li><%= link_to "Follow us on Facebook", "https://www.facebook.com/GoldensealWellness" %></li>  
+        </ul>
+    </div>
   </footer>
 </div>

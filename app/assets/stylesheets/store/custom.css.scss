@@ -128,15 +128,20 @@ header {
   z-index:5;
   //width:700px;
   min-height:400px;
+  &.twelve{
+    width:780px;
+  }
 }
 
+#sidebar {
+  width: 140px;
+}
 aside {
   position: relative;
   background-color: $wrapper_background_color;
   z-index:1;
   margin-right:0;
   padding:10px;
-  width:220px;
   @include border-left-radius(5px);
   ul { @include no-bullets(); }
 }
@@ -220,7 +225,7 @@ div#home-content {
   li {
     @include rounded("",3px);
     height: 180px;
-    width: 123px;
+    width: 143px;
     text-align: center;
     float: left;
     margin: 10px;
@@ -237,7 +242,7 @@ div#home-content {
       bottom: 0px;
       right: 0px;
       padding: 5px;
-      width: 133px;
+      width: 153px;
       min-height: 60px;
       background: #FFF image-url('shadow-top.png') 0px -35px repeat-x;
       border-top: 1px solid white;

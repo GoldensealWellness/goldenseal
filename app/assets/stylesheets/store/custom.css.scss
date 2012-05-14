@@ -123,18 +123,21 @@ header {
   background-color: $wrapper_background_color;
   @include rounded("");
   @include shadowed(0,0,15px);
-  margin-top: -15px;
+  //margin-top: -15px;
   margin-left:-60px;
   z-index:5;
   //width:700px;
-  min-height:400px;
+  min-height:600px;
   &.twelve{
-    width:780px;
+    width:760px;
   }
 }
 
 #sidebar {
-  width: 140px;
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  width: 160px;
 }
 aside {
   position: relative;
@@ -225,7 +228,7 @@ div#home-content {
   li {
     @include rounded("",3px);
     height: 180px;
-    width: 143px;
+    width: 133px;
     text-align: center;
     float: left;
     margin: 10px;
@@ -242,7 +245,7 @@ div#home-content {
       bottom: 0px;
       right: 0px;
       padding: 5px;
-      width: 153px;
+      width: 143px;
       min-height: 60px;
       background: #FFF image-url('shadow-top.png') 0px -35px repeat-x;
       border-top: 1px solid white;

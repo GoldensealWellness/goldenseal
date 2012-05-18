@@ -4,7 +4,7 @@
       <h2>Company Information</h2>
       <ul>
         <li><%= link_to "About Goldenseal Wellness", "/about" %></li>
-        <li><%= link_to "Store Locator", '#' %></li>
+        <li><%= link_to "Policies", '/help' %></li>
         <li><%= link_to "Contact Us", "/contact" %></li>
         <li><%= link_to "Help", "/help" %></li>
       </ul>
@@ -32,6 +32,14 @@
       <h2>Connect With Us</h2>
         <ul>
           <li><%= link_to "Follow us on Facebook", "https://www.facebook.com/GoldensealWellness" %></li>  
+          <li>    
+            <form action='https://madmimi.com/signups/subscribe/53446' method='post'>
+            <div id = 'email-signup'>
+              <label for='signup_email'>Sign up for our mailing list!</label><br />
+              <input class= 'default-value' size = "15" id='signup_email' name='signup[email]' type='text' value = "Your Email" />
+              <input name='commit' class='button' type='submit' value='Sign Up' />
+            </div>
+            </form>
         </ul>
     </div>
   </footer>

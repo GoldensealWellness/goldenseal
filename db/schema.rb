@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120411130728) do
+ActiveRecord::Schema.define(:version => 20120518174345) do
 
   create_table "spree_activators", :force => true do |t|
     t.string   "description"
@@ -611,9 +611,11 @@ ActiveRecord::Schema.define(:version => 20120411130728) do
   end
 
   create_table "spree_taxonomies", :force => true do |t|
-    t.string   "name",       :null => false
+    t.string   "name",                         :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "order",      :default => 100
+    t.boolean  "shop_by",    :default => true
   end
 
   create_table "spree_taxons", :force => true do |t|

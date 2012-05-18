@@ -1,10 +1,8 @@
 $(document).ready(function(){
-  /*$(function() {
+  $(function() {
 	  var height = $("#sidebar").height();
 		if (height > $('#content').height()) {
 			$("#content").css("min-height", height + 50 + 'px');
-		}else if (height < $('#content').height() && $('#sidebar').height() != 0) {
-		  $('#sidebar').css("min-height", $('#content').height() - 10 + 'px');
 		}
   });
   
@@ -12,7 +10,7 @@ $(document).ready(function(){
     if ($('#sidebar').length == 0) {
       $("#content").css("margin-left", "auto");
     }
-  });*/
+  });
   
   $(function() {
     if ($('#sidebar').length == 0) {

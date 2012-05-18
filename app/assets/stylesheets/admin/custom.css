@@ -1,3 +1,7 @@
 div.field label{
   display:inline-block;
 }
+
+#logo {
+  height: 100px;
+}

@@ -1,5 +1,5 @@
 <div id='cart-form' data-hook='new_cart_form'>
-  <% if current_user && (current_user.roles & @product.roles) || @product.all_roles? %>
+  <% if current_user && !(current_user.roles & @product.roles).empty? || @product.all_roles? %>
     <%= render :partial => 'spree/products/cart_form' %> 
   <% else %>
     <div id="no-cart">

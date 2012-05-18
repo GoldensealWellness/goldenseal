@@ -188,6 +188,19 @@ footer {
       
     }
     
+    #email-signup {
+     background-color:lighten($header_background_color, 10%);
+     padding:10px;
+     @include rounded("", 3px);
+     margin-top:3px;
+     
+     input {
+      font-size:100%;
+      margin-top:2px;
+      margin-right:2px;
+     }
+    }
+    
     h2 {
       border-bottom:1px solid $layout_background_color;
       width:50%;

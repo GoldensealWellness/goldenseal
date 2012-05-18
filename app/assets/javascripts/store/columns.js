@@ -1,6 +1,6 @@
 $(document).ready(function(){
   $(function() {
-	  var height = $("#sidebar").height();
+	  var height = $("#sidebar div:first-child").height();
 		if (height > $('#content').height()) {
 			$("#content").css("min-height", height + 50 + 'px');
 		}

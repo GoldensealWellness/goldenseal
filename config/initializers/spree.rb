@@ -5,9 +5,13 @@
 #
 # In order to initialize a setting do: 
 # config.setting_name = 'new value'
+# include Goldenseal::MySearch
+
 Spree.config do |config|
   # Example:
   # Uncomment to override the default site name.
   # config.site_name = "Spree Demo Site"
   config.allow_ssl_in_production = false;
 end
+
+Spree::Config.searcher_class = Goldenseal::MySearch

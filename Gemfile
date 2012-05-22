@@ -57,9 +57,9 @@ gem 'spree_static_content',
         :branch => '1-0-stable' 
 #gem 'spree_blue_theme', :git => 'git://github.com/spree/spree_blue_theme.git'
 gem 'spree_editor', :git => 'git://raw.github.com/spree/spree_editor.git'
-gem 'spree_product_assembly', 
+#gem 'spree_product_assembly', 
         #:path => '~/railsprojects/spree-product-assembly'
-        :git => 'git://github.com/spree/spree-product-assembly.git'
+#        :git => 'git://github.com/spree/spree-product-assembly.git'
 gem 'tinymce-rails', '>= 3.4.7.0.1'
 gem 'spree_gateway', 
         :git => 'git://github.com/spree/spree_gateway.git'

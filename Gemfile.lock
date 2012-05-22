@@ -16,6 +16,14 @@ GIT
       spree_core (~> 1.0.0)
 
 GIT
+  remote: git://github.com/spree/spree-product-assembly.git
+  revision: 0762ee0a465865b5be9c5ccd0fc833314adf82fb
+  branch: 1-0-stable
+  specs:
+    spree_product_assembly (1.0.0)
+      spree (~> 1.0)
+
+GIT
   remote: git://github.com/spree/spree.git
   revision: b58d645ac730c95d594552dc777ab3466033bce2
   branch: 1-0-stable
@@ -327,6 +335,7 @@ DEPENDENCIES
   spree_essential_blog!
   spree_essentials (~> 0.4.0.rc)
   spree_gateway!
+  spree_product_assembly!
   spree_skrill!
   spree_static_content!
   spree_usa_epay!

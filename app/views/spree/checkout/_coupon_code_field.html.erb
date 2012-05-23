@@ -1,0 +1,7 @@
+<% if Spree::Promotion.count > 0 %>
+  <div id='coupon_field'>
+    <%= form.label :coupon_code %>
+    <%= form.text_field :coupon_code %>
+  </div>
+<% end %>
+

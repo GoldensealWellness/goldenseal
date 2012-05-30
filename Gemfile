@@ -61,7 +61,7 @@ gem 'spree_editor', :git => 'git://raw.github.com/spree/spree_editor.git'
         #:path => '~/railsprojects/spree-product-assembly'
 #        :git => 'git://github.com/spree/spree-product-assembly.git',
 #         :branch => '1-0-stable'
-#gem 'tinymce-rails', '>= 3.4.7.0.1'
+gem 'tinymce-rails', '>= 3.4.7.0.1'
 gem 'spree_gateway', 
         :git => 'git://github.com/spree/spree_gateway.git'
 gem 'spree_essentials', '~> 0.4.0.rc'

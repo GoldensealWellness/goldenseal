@@ -67,3 +67,10 @@ gem 'spree_gateway',
 gem 'spree_essentials', '~> 0.4.0.rc'
 gem 'spree_essential_blog', :git => 'git://github.com/citrus/spree_essential_blog.git'
 gem 'spree_flat_in_range', :git => 'git://github.com/joeyjoejoejr/spree_flat_in_range.git'
+
+gem 'spree_solr_search', :git => 'git://github.com/romul/spree-solr-search.git'
+gem 'acts_as_solr_reloaded', 
+                  :git => 'git://github.com/evrone/acts_as_solr_reloaded.git', 
+                  :branch => "ar_namespace_support"
+
+

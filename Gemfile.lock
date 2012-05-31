@@ -7,6 +7,13 @@ GIT
       spree_essentials (~> 0.4.0.rc3)
 
 GIT
+  remote: git://github.com/evrone/acts_as_solr_reloaded.git
+  revision: 7c753d7887c01a60fe111bb7008eb84a68a92f7a
+  branch: ar_namespace_support
+  specs:
+    acts_as_solr_reloaded (1.6.0)
+
+GIT
   remote: git://github.com/joeyjoejoejr/spree_flat_in_range.git
   revision: bd1380bb43d60a3a4ffa1a2e5bd5e56d4fe18bf4
   specs:
@@ -21,6 +28,14 @@ GIT
     spree_static_content (1.0.1)
       spree_auth (~> 1.0.0)
       spree_core (~> 1.0.0)
+
+GIT
+  remote: git://github.com/romul/spree-solr-search.git
+  revision: 5298fc9f17cb2d296c6ba8e6803ed7e966994521
+  specs:
+    spree_solr_search (1.0.0.rc)
+      acts_as_solr_reloaded (>= 1.6.0)
+      spree_core (>= 1.0.0)
 
 GIT
   remote: git://github.com/spree/spree.git
@@ -321,6 +336,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  acts_as_solr_reloaded!
   capistrano
   coffee-rails
   foreman
@@ -336,6 +352,7 @@ DEPENDENCIES
   spree_flat_in_range!
   spree_gateway!
   spree_skrill!
+  spree_solr_search!
   spree_static_content!
   spree_usa_epay!
   therubyracer

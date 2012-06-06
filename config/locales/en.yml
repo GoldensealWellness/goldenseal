@@ -3,3 +3,4 @@
 
 en:
   recommend_taxonomy: "%{taxonomy} Recommends"
+  my_taxon_names_facet: "Category"

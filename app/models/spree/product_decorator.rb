@@ -6,4 +6,11 @@ Spree::Product.class_eval do
   def all_roles?
     roles.count == Spree::Role.count
   end
+  
+  private 
+  
+  def my_taxon_names
+    debugger
+    taxons.map{|x| x.name if x.root.name == "Categories"}.compact!
+  end
 end

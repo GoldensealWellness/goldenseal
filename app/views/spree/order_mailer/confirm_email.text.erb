@@ -1,4 +1,4 @@
-Dear Customer,
+Dear <%= @order.name %>,
 
 Please review and retain the following order information for your records.
 
@@ -15,5 +15,21 @@ Subtotal: <%= number_to_currency @order.item_total %>
 <% end %>
 Order Total: <%= number_to_currency @order.total %>
 
+============================================================
+Billing Address
+============================================================
+<%= "#{@order.bill_address.firstname} #{@order.bill_address.lastname}" %>
+<%= @order.bill_address.address1 %>
+<%= @order.bill_address.address2 unless @order.bill_address.address2 == ""%>
+<%= "#{@order.bill_address} #{@order.bill_address.state.abbr}, #{@order.bill_address.zipcode}" %>
 
+============================================================
+Shipping Address
+============================================================
+<%= "#{@order.ship_address.firstname} #{@order.ship_address.lastname}" %>
+<%= @order.ship_address.address1 %>
+<%= @order.ship_address.address2 unless @order.ship_address.address2 == ""%>
+<%= "#{@order.ship_address} #{@order.ship_address.state.abbr}, #{@order.ship_address.zipcode}" %>
+
+Check the status of your order at http://goldensealwellness.com/account
 Thank you for your business.

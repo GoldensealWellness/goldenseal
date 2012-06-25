@@ -225,7 +225,7 @@ footer {
 div#home-content {
   margin-bottom:20px;
 
-  img {
+  img#bordered {
     padding:5px;
     @include shadowed(0,0,10px);
   }

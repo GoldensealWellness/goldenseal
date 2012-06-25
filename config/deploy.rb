@@ -11,7 +11,7 @@ role :app, '66.228.62.131'
 role :db,  '66.228.62.131', :primary => true
 
 set :scm, :git
-set :repository,  "http://hotclub1@joe.hotclubofdurham.com/git/proj.git"
+set :repository,  "joe@anything-joes.com:/home/joe/git/goldenseal"
 set :branch,      "master"
 set :deploy_to,   "/data/#{application}"
 set :deploy_via,  :remote_cache

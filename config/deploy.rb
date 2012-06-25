@@ -12,6 +12,7 @@ role :db,  '66.228.62.131', :primary => true
 
 set :scm, :git
 set :repository,  "joe@anything-joes.com:/home/joe/git/goldenseal"
+ssh_options[:forward_agent] = true
 set :branch,      "master"
 set :deploy_to,   "/data/#{application}"
 set :deploy_via,  :remote_cache

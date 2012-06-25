@@ -340,7 +340,7 @@ DEPENDENCIES
   capistrano
   coffee-rails
   foreman
-  jquery-rails
+  jquery-rails (= 1.0.19)
   mysql2
   rails (= 3.1.3)
   ruby-debug19

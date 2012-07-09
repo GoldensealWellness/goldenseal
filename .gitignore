@@ -6,6 +6,10 @@
 
 # Ignore bundler config
 /.bundle
+/.rvmrc
+
+/config/database.yml
+/config/deploy.rb
 
 # Ignore the default SQLite database.
 /db/*.sqlite3
@@ -17,3 +21,6 @@
 # Ignore uploaded image paths
 /public/spree
 /public/uploads
+/public/assets
+/solr
+

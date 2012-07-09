@@ -4,7 +4,7 @@ Spree::OrdersController.class_eval do
   def remove_promos
     if @order = current_order
       @order.adjustments.each do |adj|
-        adj.destroy if adj.originator_type == 'Spree::PromotionAction'
+        adj.destroy
       end
     end
   end

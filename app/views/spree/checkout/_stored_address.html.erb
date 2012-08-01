@@ -1,0 +1,5 @@
+<td><%= form.radio_button "#{address_name}_id", address.id, :checked => (idx == 0) %></td> 
+<td><label for="order_<%= address_name %>_id_<%= address.id%>">
+<pre><%= address.printable %></pre>
+</label> 
+<%= link_to t(:edit), edit_address_path(address) %><br /></td>

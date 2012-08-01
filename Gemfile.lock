@@ -38,6 +38,15 @@ GIT
       spree_core (>= 1.0.0)
 
 GIT
+  remote: git://github.com/romul/spree_address_book.git
+  revision: ffbdac32fe4c51a5bbe729d0464ac93fa7fabd80
+  branch: 1-0-stable
+  specs:
+    spree_address_book (1.0.2)
+      spree_auth (~> 1.0.0)
+      spree_core (~> 1.0.0)
+
+GIT
   remote: git://github.com/spree/spree.git
   revision: b58d645ac730c95d594552dc777ab3466033bce2
   branch: 1-0-stable
@@ -346,6 +355,7 @@ DEPENDENCIES
   ruby-debug19
   sass-rails (= 3.1.5)
   spree!
+  spree_address_book!
   spree_editor!
   spree_essential_blog!
   spree_essentials (~> 0.4.0.rc)

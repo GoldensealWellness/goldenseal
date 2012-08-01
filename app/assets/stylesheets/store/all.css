@@ -6,4 +6,5 @@
  *= require_self
  *= require store/spree_core
  *= require store/spree_essential_blog
+ *= require store/spree_address_book
 */

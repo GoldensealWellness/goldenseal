@@ -395,3 +395,19 @@ background-color: $link_text_color;
 .search-results-title {
   padding: 5px;
 }
+
+.addr_field {
+  tr:hover {
+    border:5px solid black;
+    background-color: lighten($header_background_color, 70%);
+  }
+  border-collapse: separate;
+}
+
+#use_billing_wrap {
+  background-color: lighten($header_background_color, 70%);
+  position: absolute;
+  left: 580px;
+  top: 90px;
+  padding: 5px;
+}

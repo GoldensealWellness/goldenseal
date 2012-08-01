@@ -4,11 +4,12 @@
 // It's not advisable to add code directly here, but if you do, it'll appear at the bottom of the
 // the compiled file.
 //
-
 //= require store/spree_core
 //= require store/spree_auth
 //= require store/spree_api
 //= require store/spree_promo
 //= require store/solr_sort_by
+//= require store/spree_address_book
 //= require jquery-ui
 //= require_tree .
+

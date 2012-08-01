@@ -10,7 +10,6 @@ Spree::Product.class_eval do
   private 
   
   def my_taxon_names
-    debugger
     taxons.map{|x| x.name if x.root.name == "Categories"}.compact!
   end
 end

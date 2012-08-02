@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<body>
+<%= link_to image_tag('http://goldensealwellness.com/assets/admin/bg/spree_50.png',
+                       :width => 150, :height => 150 ), 'http://goldensealwellness.com' %>
+
+<p>Dear <%= @order.name %>,</p>
+
+<p>Please review and retain the following order information for your records. If 
+you would like to manage your order online please visit <%= link_to "http://goldensealwellness.com", spree.root_url %>
+and click "My Account" at the top of the page.</p>
+
+<table cellspacing='0'>
+<tbody>
+<tr>
+  <td bgcolor='#d8cf9e' colspan="2">
+    Order Summary
+  </td>
+</tr>
+
+<tr>
+  <td>Order #:</td><td><%= link_to @order.number, spree.order_url(@order) %></td>
+</tr>
+
+<tr>
+  <td>Shipping Method:</td><td><%= @order.shipping_method.name %></td>
+</tr>
+
+<tr>
+  <td colspan="2"><i>An email will when your order is shipped, or when 
+  it's available to pick up in the store if you chose "Ship to Store"</i></td>
+</tr>
+<tr><td><br /></td></tr>
+<% @order.line_items.each do |item| %>
+  <tr>
+    <td collspan = 2>
+      <%=item.variant.sku %> <%=item.variant.product.name%> <%= item.variant.options_text %> (<%=item.quantity%>) @ <%= number_to_currency item.price %> = <%= number_to_currency(item.price * item.quantity) %>
+    </td>  
+  </tr>
+<% end %>
+
+<tr>
+<td>Subtotal:</td> <td><%= number_to_currency @order.item_total %></td>
+</tr>
+
+<% @order.adjustments.eligible.each do |adjustment| %>
+<tr>
+  <td><%= adjustment.label %>:</td><td><%= number_to_currency adjustment.amount %></td>
+</tr>
+<% end %>
+
+<tr>
+  <td>Order Total:</td><td><%= number_to_currency @order.total %></td>
+</tr>
+<tr><td><br /></td></tr>
+<tr bgcolor='#d8cf9e'>
+  <td>Billing Address</td><td>Shipping Address</td>
+</tr>
+
+<tr>
+  <td><%= "#{@order.bill_address.firstname} #{@order.bill_address.lastname}" %></td>
+  <td><%= "#{@order.ship_address.firstname} #{@order.ship_address.lastname}" %></td>
+</tr>
+
+<tr>
+  <td><%= @order.bill_address.address1 %></td>
+  <td><%= @order.ship_address.address1 %></td>
+</tr>
+
+<tr>
+  <td><%= @order.bill_address.address2 unless @order.bill_address.address2 == ""%></td>
+  <td><%= @order.ship_address.address2 unless @order.ship_address.address2 == ""%></td>
+</tr>
+
+<tr>
+  <td><%= "#{@order.bill_address.city} #{@order.bill_address.state.abbr}, #{@order.bill_address.zipcode}" %></td>
+  <td><%= "#{@order.ship_address.city} #{@order.ship_address.state.abbr}, #{@order.ship_address.zipcode}" %></td>
+</tr>
+</body>

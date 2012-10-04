@@ -1,50 +1,24 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.1.3'
-
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
-
 gem 'mysql2'
+gem 'jquery-rails', '1.0.19'
 
 group :production do
   gem 'unicorn'
   gem 'foreman'
   gem 'therubyracer', :platforms => :ruby
- #only required for 0.70.x or later
 end
-# Gems used only for assets and not required
-# in production environments by default.
+
 group :assets do
   gem 'sass-rails', '3.1.5'
   gem 'coffee-rails'
-
   gem 'uglifier', '>= 1.0.3'
 end
 
 group :development do
   gem 'capistrano'
-  gem 'ruby-debug19', :require => 'ruby-debug'
 end
-
-
-
-gem 'jquery-rails', '1.0.19'
-
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
-
-# To use Jbuilder templates for JSON
-# gem 'jbuilder'
-
-# Use unicorn as the web server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano'
-
-# To use debugger
-
 
 gem 'spree',
         :git => 'git://github.com/spree/spree.git',
@@ -68,9 +42,9 @@ gem 'spree_essentials', '~> 0.4.0.rc'
 gem 'spree_essential_blog', :git => 'git://github.com/citrus/spree_essential_blog.git'
 gem 'spree_flat_in_range', :git => 'git://github.com/joeyjoejoejr/spree_flat_in_range.git'
 
-gem 'spree_solr_search', :git => 'git://github.com/romul/spree-solr-search.git'
-gem 'acts_as_solr_reloaded', 
-                  :git => 'git://github.com/evrone/acts_as_solr_reloaded.git', 
-                  :branch => "ar_namespace_support"
+# gem 'spree_solr_search', :git => 'git://github.com/romul/spree-solr-search.git'
+#gem 'acts_as_solr_reloaded', 
+#                  :git => 'git://github.com/evrone/acts_as_solr_reloaded.git', 
+#                  :branch => "ar_namespace_support"
 gem 'spree_address_book', :git => 'git://github.com/romul/spree_address_book.git',
                           :branch => '1-0-stable'

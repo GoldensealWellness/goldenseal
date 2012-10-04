@@ -13,3 +13,4 @@
 //= require jquery-ui
 //= require_tree .
 
+//= require store/spree_gateway

@@ -12,5 +12,3 @@
 //= require store/spree_address_book
 //= require jquery-ui
 //= require_tree .
-
-//= require store/spree_gateway

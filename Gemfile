@@ -43,7 +43,7 @@ gem 'spree_essential_blog', :git => 'git://github.com/citrus/spree_essential_blo
 gem 'spree_flat_in_range', :git => 'git://github.com/joeyjoejoejr/spree_flat_in_range.git'
 
 # gem 'spree_solr_search', :git => 'git://github.com/romul/spree-solr-search.git'
-#gem 'acts_as_solr_reloaded', 
+# gem 'acts_as_solr_reloaded', 
 #                  :git => 'git://github.com/evrone/acts_as_solr_reloaded.git', 
 #                  :branch => "ar_namespace_support"
 gem 'spree_address_book', :git => 'git://github.com/romul/spree_address_book.git',

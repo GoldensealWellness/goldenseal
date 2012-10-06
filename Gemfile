@@ -7,6 +7,7 @@ gem 'jquery-rails', '1.0.19'
 group :production do
   gem 'unicorn'
   gem 'foreman'
+  gem 'mysql2'
   gem 'therubyracer', :platforms => :ruby
 end
 

@@ -24,4 +24,11 @@
 /public/spree
 /public/uploads
 /public/assets
+<<<<<<< HEAD
 /solr
+=======
+/solr
+
+# Ignore uploaded local images
+/app/spree
+>>>>>>> products-changes

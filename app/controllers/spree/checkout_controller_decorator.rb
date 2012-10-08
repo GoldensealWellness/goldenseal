@@ -14,5 +14,6 @@ Spree::CheckoutController.class_eval do
   
   def destroy
     @order.bill_address.destroy
+    respond_with(@order, :location => checkout_state_path(@order.state))
   end
 end

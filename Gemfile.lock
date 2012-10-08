@@ -21,8 +21,8 @@ GIT
       spree_core (~> 1)
 
 GIT
-  remote: git://github.com/joeyjoejoejr/spree_static_content.git
-  revision: 5e26e0dfc095c3825165e1109488c8552f296613
+  remote: git://github.com/kyleries/spree_static_content.git
+  revision: 1f874fb25160bf8ecc0a0289040d33468cb3290c
   branch: 1-0-stable
   specs:
     spree_static_content (1.0.1)

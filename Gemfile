@@ -26,10 +26,9 @@ gem 'spree',
         :branch => '1-0-stable'
 gem 'spree_usa_epay', :git => 'git://github.com/spree/spree_usa_epay.git', :ref => '0cb57b4afbf1eef6a0ad67a4a1ea506c6418fde1'
 gem 'spree_skrill', :git => 'git://github.com/spree/spree_skrill.git', :ref => '37e6159aa71ec053499e2c7aa9cf799a3b3bdb39'
-
 gem 'spree_static_content', 
-        :git => 'git://github.com/joeyjoejoejr/spree_static_content.git', 
-        :branch => '1-0-stable' 
+        :git => 'git://github.com/kyleries/spree_static_content.git',
+        :branch => '1-0-stable'
 #gem 'spree_blue_theme', :git => 'git://github.com/spree/spree_blue_theme.git'
 gem 'spree_editor', :git => 'git://raw.github.com/spree/spree_editor.git'
 #gem 'spree_product_assembly', 

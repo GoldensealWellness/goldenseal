@@ -11,4 +11,8 @@ Spree::CheckoutController.class_eval do
       end
     end
   end
+  
+  def destroy
+    @order.bill_address.destroy
+  end
 end

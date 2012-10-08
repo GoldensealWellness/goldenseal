@@ -2,4 +2,8 @@
 <td><label for="order_<%= address_name %>_id_<%= address.id%>">
 <pre><%= address.printable %></pre>
 </label> 
-<%= link_to t(:edit), edit_address_path(address) %><br /></td>
+<%= link_to t(:edit), edit_address_path(address) %>
+|
+<%= link_to t(:delete), address_path(address), :method => :delete, data: { confirm: "Are you sure you want to delete this saved address?" } %>
+<br />
+</td>

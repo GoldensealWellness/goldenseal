@@ -63,9 +63,10 @@ Goldenseal::Application.routes.draw do
 end
 
 Spree::Core::Engine.routes.append do
+  resource :address, :only => :destroy
   resource :search
   
-  namespace :admin do
+    namespace :admin do
     resource :homepage
     resources :roles
     resources :referrals

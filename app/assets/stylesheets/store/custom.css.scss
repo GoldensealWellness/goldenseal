@@ -397,6 +397,7 @@ background-color: $link_text_color;
 }
 
 .addr_field {
+	pre {font-family: sans-serif;}
   tr:hover {
     border:5px solid black;
     background-color: lighten($header_background_color, 70%);

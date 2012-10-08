@@ -24,3 +24,5 @@
 /public/assets
 /solr
 
+# Ignore uploaded local images
+/app/spree

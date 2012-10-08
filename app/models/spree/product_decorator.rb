@@ -7,6 +7,10 @@ Spree::Product.class_eval do
     roles.count == Spree::Role.count
   end
   
+  def next_link
+    category_id = self.taxon_ids.first
+  end
+  
   private 
   
   def my_taxon_names

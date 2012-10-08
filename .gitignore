@@ -8,10 +8,10 @@
 /.bundle
 /.rvmrc
 
+/app/spree
+
 /config/database.yml
 /config/deploy.rb
-
-/app/spree
 
 # Ignore the default SQLite database.
 /db/*.sqlite3

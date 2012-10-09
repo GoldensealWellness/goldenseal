@@ -17,7 +17,7 @@
     <div class="select_address">
       <table class='addr_field'>
         <% @addresses.each_with_index do |address, idx| %>
-        <tr>
+        <tr id="billing_address_<%= address.id %>">
           <span id="<%= [address_type, dom_id(address)].join('_') %>">
             <%= render :partial => 'stored_address',
                        :locals => { :address_name => address_name,

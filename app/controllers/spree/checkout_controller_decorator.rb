@@ -1,6 +1,8 @@
 Spree::CheckoutController.class_eval do
   before_filter :save_referral, :only => :update
   
+  respond_to :html, :xml, :json, :js
+  
   def save_referral
     if params[:order]
       if params[:order][:referral] && params[:order][:referral] == "0" && Spree::Referral.find_by_name(params[:other]).nil?

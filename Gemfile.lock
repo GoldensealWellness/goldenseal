@@ -22,7 +22,7 @@ GIT
 
 GIT
   remote: git://github.com/kyleries/spree_address_book.git
-  revision: 63fae340e2618a84fd18edac002583d3aad0743d
+  revision: e651fc0ed8818d2b9807a3151545e7d6b42ffe02
   branch: 1-0-stable
   specs:
     spree_address_book (1.0.2)

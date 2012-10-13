@@ -35,6 +35,8 @@ Goldenseal::Application.configure do
 
   # Prepend all log lines with the following tags
   # config.log_tags = [ :subdomain, :uuid ]
+  config.consider_all_requests_local       = true
+  config.action_controller.perform_caching = false
 
   # Use a different logger for distributed setups
   # config.logger = ActiveSupport::TaggedLogging.new(SyslogLogger.new)

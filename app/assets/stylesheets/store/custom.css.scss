@@ -313,6 +313,11 @@ div#cart-form div.five {
   }
 }
 
+.prod_add_cart {
+	background-image: url('cart.png');
+	&:hover {background-image: url('cart.png')}
+}
+
 nav#top-nav-bar {
   @include shadowed(0, 0, 5px)
 }

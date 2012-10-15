@@ -11,23 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120801153208) do
-
-  create_table "delayed_jobs", :force => true do |t|
-    t.integer  "priority",   :default => 0
-    t.integer  "attempts",   :default => 0
-    t.text     "handler"
-    t.text     "last_error"
-    t.datetime "run_at"
-    t.datetime "locked_at"
-    t.datetime "failed_at"
-    t.string   "locked_by"
-    t.string   "queue"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "delayed_jobs", ["priority", "run_at"], :name => "delayed_jobs_priority"
+ActiveRecord::Schema.define(:version => 20121015174701) do
 
   create_table "spree_activators", :force => true do |t|
     t.string   "description"
@@ -700,6 +684,8 @@ ActiveRecord::Schema.define(:version => 20120801153208) do
     t.datetime "locked_at"
     t.datetime "remember_created_at"
     t.string   "api_key",              :limit => 40
+    t.string   "f_name"
+    t.string   "l_name"
   end
 
   add_index "spree_users", ["persistence_token"], :name => "index_users_on_persistence_token"

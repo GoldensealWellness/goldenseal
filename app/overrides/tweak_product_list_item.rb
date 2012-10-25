@@ -16,7 +16,7 @@ Deface::Override.new(:virtual_path => 'spree/shared/_products',
           :class => 'title', 
           :in => 1..product.on_hand,
           :style => "display: none" %>
-        <%= button_tag :id => 'add-to-cart-button', :class => "prod_add_cart", :style => "position: absolute; bottom: 3px; right: 3px" do %>
+        <%= button_tag :id => 'add-to-cart-button', :class => "prod_add_cart", :style => "position: absolute; bottom: 3px; right: 3px; height: 22px; width: 25px" do %>
             <%= " " %>
         <% end %>
       <% else %>

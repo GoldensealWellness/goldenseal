@@ -19,6 +19,7 @@ end
 
 group :development do
   gem 'capistrano'
+  gem 'rails-dev-tweaks', '~> 0.6.1'
 end
 
 gem 'spree',

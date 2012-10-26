@@ -63,6 +63,8 @@ Goldenseal::Application.routes.draw do
 end
 
 Spree::Core::Engine.routes.append do
+  resource :intake_infos
+  match "/contact" => "static_content#create", :via => :post
   resource :search
   
     namespace :admin do
@@ -74,5 +76,4 @@ Spree::Core::Engine.routes.append do
       resources :blurbs  
     end
   end
-
 end

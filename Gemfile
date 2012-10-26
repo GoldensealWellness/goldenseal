@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 gem 'rails', '3.1.3'
 gem 'mysql2'
 gem 'jquery-rails', '1.0.19'
+gem "recaptcha", :require => "recaptcha/rails"
 
 group :production do
   gem 'unicorn'

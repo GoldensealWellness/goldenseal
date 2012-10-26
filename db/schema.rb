@@ -11,7 +11,30 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121015174701) do
+ActiveRecord::Schema.define(:version => 20121025213103) do
+
+  create_table "intake_infos", :force => true do |t|
+    t.string   "client_first_name"
+    t.string   "client_last_name"
+    t.string   "contact_first_name"
+    t.string   "contact_last_name"
+    t.string   "email"
+    t.string   "telephone"
+    t.string   "reason"
+    t.datetime "dob"
+    t.string   "address"
+    t.string   "city"
+    t.string   "state"
+    t.string   "zip"
+    t.string   "country"
+    t.string   "insurance"
+    t.string   "location"
+    t.string   "best_time"
+    t.string   "referral"
+    t.string   "type_of_service"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "spree_activators", :force => true do |t|
     t.string   "description"

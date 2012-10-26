@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <h1>Goldenseal Wellness Intake Information</h1>
+    
+    <hr />
+    
+    <label><b>What Type of Service Are You Interestd In?</b></label>
+    <%= @intake_information.type_of_service %><br /><br />
+    <label><b>Client Name:</b></label><br />
+    <%= @intake_information.client_first_name %> <% @intake_information.client_last_name %><br /><br />
+    <label><b>Contact Name:</b></label>
+    <%= @intake_information.contact_first_name %> <% @intake_information.contact_last_name %><br /><br />
+    <label><b>What is your email address?</b></label>
+    <%= @intake_information.email %><br /><br />
+    <label><b>Telephone Number:</b></label>
+    <%= @intake_information.telephone %><br /><br />
+    <label><b>Reason for Seeking Services:</b></label>
+    <%= @intake_information.reason %><br /><br />
+    <label><b>Date of Birth:</b></label>
+    <%= @intake_information.dob %><br /><br />
+    <label><b>Address:</b></label>
+    <%= @intake_information.address %><br />
+    <%= @intake_information.city %>, <%= @intake_information.state %> <%= @intake_information.zip %><br />
+    <%= @intake_information.country %><br /><br />
+    <label>Insurance:</label><br />
+    <%= @intake_information.insurance %><br /><br />
+    <label>Preferred Location:</label>
+    <%= @intake_information.location %><br /><br />
+    <label>Best Time to Contact</label><br />
+    <%= @intake_information.best_time %><br /><br />
+    <label>How You Heard About Us:</label><br />
+    <%= @intake_information.referral %><br /><br />
+  </body>
+</html>
+

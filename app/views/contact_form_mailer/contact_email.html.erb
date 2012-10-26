@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <h1>Goldenseal Wellness Contact Form</h1>
+    
+    <label><b>Attention:</b></label>
+    <%= @contact_form.attention %><br /><br />
+    
+    <hr />
+    
+    <label><b>What Location?</b></label>
+    <%= @contact_form.location %><br /><br />
+    <label><b>Client Name:</b></label><br />
+    <%= @contact_form.first_name %> <% @contact_form.last_name %><br /><br />
+    <label><b>What is your email address?</b></label>
+    <%= @contact_form.email %><br /><br />
+    <label><b>Telephone Number:</b></label>
+    <%= @contact_form.telephone %><br /><br />
+    <label><b>Message:</b></label>
+    <%= @contact_form.message %><br /><br />
+
+  </body>
+</html>
+

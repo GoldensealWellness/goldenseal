@@ -1,0 +1,79 @@
+<div class="contact-form">
+  <%= form_for @contact_form, :url => { :controller => :static_content, :action => :contact_form } do |form| %>
+      <div>
+        <h3>Please Enter Your Information Below:</h3>
+        <p>All fields are required.</p>
+      </div>
+    <div class="row">
+      <div class="four columns tar inline"><span>Location</span></div>
+      <div class="six columns">
+        <%= form.select(:location, '
+                              <option value="Not Selected"></option>
+                              <option value="Charlotte Location">Charlotte Location</option>
+                              <option value="Raleigh Location">Raleigh Location</option>
+                              ') %>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="four columns tar inline"><span>First Name</span></div>
+      <div class="six columns">
+        <%= form.text_field :first_name %>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="four columns tar inline"><span>Last Name</span></div>
+      <div class="six columns">
+        <%= form.text_field :last_name %>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="four columns tar inline"><span>What is Your Email Address?*</span></div>
+      <div class="six columns">
+        <%= form.email_field :email %>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="four columns tar inline"><span>What is Your Telephone Number?*</span></div>
+      <div class="six columns">
+        <%= form.telephone_field :telephone %>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="four columns tar inline"><span>Attention</span></div>
+      <div class="six columns">
+        <%= form.select(:attention, '
+                                <option value="New Patients">New Patients</option>
+                                <option value="Established Patients">Established Patients</option>
+                                <option value="Other Services">Other Services</option>
+                                <option value="General Questions">General Questions</option>
+                                ') %>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="four columns tar inline"><span>Message</span></div>
+      <div class="six columns">
+        <%= form.text_area :message %>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="four columns tar inline"></div>
+      <div class="six columns">
+        <%= recaptcha_tags :public_key => "6LeDndcSAAAAAMW6WbhripXwgwdNEmooLh8Um-1U" %>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="four columns tar inline"></div>
+      <div class="six columns">
+        <%= form.submit "Send to Dr. Parkes' Inbox" %>
+      </div>
+    </div>
+  <% end %>
+</div>

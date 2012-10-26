@@ -64,16 +64,19 @@ end
 
 Spree::Core::Engine.routes.append do
   resource :intake_infos
-  match "/contact" => "static_content#create", :via => :post
+  match "/about" => "static_content#create", :via => :post
+  match "/dr-parkes-corner" => "static_content#create", :via => :post
+  match "/contact" => "static_content#contact_form", :via => :post
   resource :search
   
     namespace :admin do
-    resource :homepage
-    resources :roles
-    resources :referrals
-    match "/upload" => "files#upload"
-    resources :products do
-      resources :blurbs  
-    end
+      resource :messages
+      resource :homepage
+      resources :roles
+      resources :referrals
+      match "/upload" => "files#upload"
+      resources :products do
+        resources :blurbs  
+      end
   end
 end

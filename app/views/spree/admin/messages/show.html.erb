@@ -1,0 +1,93 @@
+<h1><%= t(:intake_form_submissions) %></h1>
+
+<table class="index" id="listing_users">
+  <thead>
+    <tr>
+      <th>
+        <%= sort_link @search,:created_at, t(:sent), {}, {:title => 'intakes_created_at_title'} %>
+      </th> 
+      <th>
+        <%= sort_link @search,:client_first_name, t(:First_Name), {}, {:title => 'intakes_first_name_title'} %>
+      </th>
+      <th>
+        <%= sort_link @search,:client_last_name, t(:Last_Name), {}, {:title => 'intakes_last_name_title'} %>
+      </th>
+      <th>
+        <%= sort_link @search,:telephone, t(:Phone), {}, {:title => 'intakes_phone_title'} %>
+      </th>
+      <th>
+        <%= sort_link @search,:reason, t(:Reason), {}, {:title => 'intakes_reason_title'} %>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @intakes.each do |intake|%>
+      <tr id="<%= intake.id %>">
+        <td width="50px" class='user_email'>
+          <%=time_ago_in_words(intake.created_at)%> ago
+        </td>
+        <td width="75px" class='user_email'>
+          <%=intake.client_first_name%>
+        </td>
+        <td width="75px" class='user_email'>
+          <%=intake.client_last_name%>
+        </td>
+        <td width="100px" class='user_email'>
+          <%=intake.telephone%>
+        </td>
+        <td width="150px" class='user_email'>
+          <%=intake.reason%>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= paginate @intakes %>
+
+<h1><%= t(:contact_form_submissions) %></h1>
+
+<table class="index" id="listing_users">
+  <thead>
+    <tr>
+      <th>
+        <%= sort_link @search,:created_at, t(:sent), {}, {:title => 'contacts_created_at_title'} %>
+      </th> 
+      <th>
+        <%= sort_link @search,:first_name, t(:First_Name), {}, {:title => 'contacts_first_name_title'} %>
+      </th>
+      <th>
+        <%= sort_link @search,:last_name, t(:Last_Name), {}, {:title => 'contacts_last_name_title'} %>
+      </th>
+      <th>
+        <%= sort_link @search,:telephone, t(:Phone), {}, {:title => 'contacts_last_name_title'} %>
+      </th>
+      <th>
+        <%= sort_link @search,:email, t(:Email), {}, {:title => 'contacts_last_name_title'} %>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @contacts.each do |contact|%>
+      <tr id="<%= contact.id %>">
+        <td width="100px" class='user_email'>
+          <%=time_ago_in_words(contact.created_at)%>
+        </td>
+        <td width="75px" class='user_email'>
+          <%=contact.first_name%>
+        </td>
+        <td width="75px" class='user_email'>
+          <%=contact.last_name%>
+        </td>
+        <td width="75px" class='user_email'>
+          <%=contact.telephone%>
+        </td>
+        <td width="75px" class='user_email'>
+          <%=contact.email%>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= paginate @contacts %>

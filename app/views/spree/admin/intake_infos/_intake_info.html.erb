@@ -1,0 +1,34 @@
+<h1><%= t(:intake_form_submissions) %></h1>
+
+<table class="index" id="listing_users">
+  <thead>
+    <tr>
+      <th>
+        <%= sort_link @search,:created_at, t(:sent), {}, {:title => 'intakes_created_at_title'} %>
+      </th> 
+      <th>
+        <%= sort_link @search,:client_first_name, t(:First_Name), {}, {:title => 'intakes_first_name_title'} %>
+      </th>
+      <th>
+        <%= sort_link @search,:client_last_name, t(:Last_Name), {}, {:title => 'intakes_last_name_title'} %>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @intakes.each do |intake|%>
+      <tr id="<%= intake.id %>">
+        <td width="350px" class='user_email'>
+          <%=time_ago_in_words(intake.created_at)%>
+        </td>
+        <td width="100px" class='user_email'>
+          <%=intake.client_first_name%>
+        </td>
+        <td width="100px" class='user_email'>
+          <%=intake.client_last_name%>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= paginate @intakes %>

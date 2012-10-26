@@ -7,6 +7,7 @@ class Spree::StaticContentController < Spree::BaseController
   
   def show
     @intake_info = IntakeInfo.new
+    @contact_form = ContactForm.new
     path = case params[:path]
     when Array
       '/' + params[:path].join("/")
@@ -31,13 +32,31 @@ class Spree::StaticContentController < Spree::BaseController
         flash[:success] = "Thanks for your message!"
         redirect_to root_path
       else
-              redirect_to :back
+        redirect_to :back
         flash[:alert] = "Oops! Your message was not sent. Please call us at (919) 354-0840 ext 201"
       end
     else
       redirect_to :back
       flash[:alert] = "Oops! Looks like the Captcha was entered incorrectly. Please try again."
     end
+  end
+  
+  def contact_form
+    @contact_form = ContactForm.new(params[:contact_form])
+    if verify_recaptcha(:private_key => "6LeDndcSAAAAAOayCRACYBZ9y7pe0pOXFgI1C1lT") 
+      if @contact_form.save
+        ContactFormMailer.contact_email(@contact_form).deliver
+        flash[:success] = "Thanks for your message!"
+        redirect_to root_path
+      else
+        redirect_to :back
+        flash[:alert] = "Oops! Your message was not sent. Please call us at (919) 354-0840 ext 201"
+      end
+    else
+      redirect_to :back
+      flash[:alert] = "Oops! Looks like the Captcha was entered incorrectly. Please try again."
+    end
+    
   end
 
   private

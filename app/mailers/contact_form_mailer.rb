@@ -9,11 +9,11 @@
 # end
 
 class ContactFormMailer < ActionMailer::Base
-  default :from => "Kyle Ries <kyle.on.ruby@gmail.com>"
+  default :from => "Goldenseal Wellness <admin@goldensealwellness.com>"
 
   def contact_email(contact_form)
     @contact_form = contact_form
-    mail(:to => [ "kyle.ries@gmail.com", @contact_form.email ],
+    mail(:to => [ "admin@goldensealwellness.com", @contact_form.email ],
          :subject => "Goldenseal Wellness Contact Form")
   end
 end

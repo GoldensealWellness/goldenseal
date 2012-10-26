@@ -9,11 +9,11 @@
 # end
 
 class IntakeInfoMailer < ActionMailer::Base
-  default :from => "Kyle Ries <kyle.on.ruby@gmail.com>"
+  default :from => "Goldenseal Wellness <cpmhwellness@gmail.com>"
 
   def intake_email(intake_information)
     @intake_information = intake_information
-    mail(:to => [ "kyle.ries@gmail.com", @intake_information.email ],
+    mail(:to => [ "cpmhwellness@gmail.com", @intake_information.email ],
          :subject => "Goldenseal Wellness Intake Form")
   end
 end

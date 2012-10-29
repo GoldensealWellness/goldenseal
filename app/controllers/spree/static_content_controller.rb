@@ -56,7 +56,6 @@ class Spree::StaticContentController < Spree::BaseController
       redirect_to :back
       flash[:alert] = "Oops! Looks like the Captcha was entered incorrectly. Please try again."
     end
-    
   end
 
   private

@@ -8,8 +8,6 @@
     
     <hr />
     
-    <label><b>What Type of Service Are You Interestd In?</b></label>
-    <%= @intake_information.type_of_service %><br /><br />
     <label><b>Client Name:</b></label><br />
     <%= @intake_information.client_first_name %> <% @intake_information.client_last_name %><br /><br />
     <label><b>Contact Name:</b></label>
@@ -26,10 +24,6 @@
     <%= @intake_information.address %><br />
     <%= @intake_information.city %>, <%= @intake_information.state %> <%= @intake_information.zip %><br />
     <%= @intake_information.country %><br /><br />
-    <label>Insurance:</label><br />
-    <%= @intake_information.insurance %><br /><br />
-    <label>Preferred Location:</label>
-    <%= @intake_information.location %><br /><br />
     <label>Best Time to Contact</label><br />
     <%= @intake_information.best_time %><br /><br />
     <label>How You Heard About Us:</label><br />

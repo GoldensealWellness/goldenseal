@@ -5,22 +5,9 @@
         <h3>Please Enter Your Information Below:</h3>
         <p>Fields marked with * are required.</p>
       </div>
-    <div class="row">
-      <div class="four columns tar inline"><span>Type of Service*</span></div>
-      <div class="six columns">
-        <%= form.select(:type_of_service, '
-                              <option value="Not Selected"></option>
-                              <option value="Mental Health Services-Unsure">Mental Health Services-Unsure</option>
-                              <option value="Medication Management Only">Medication Management Only</option>
-                              <option value="Therapy Only">Therapy Only</option>
-                              <option value="Medication and Therapy">Medication and Therapy</option>
-                              <option value="Wellness Center Services">Wellness Center Services</option>
-                              ') %>
-      </div>
-    </div>
 
     <div class="row">
-      <div class="four columns tar inline"><span><%= @page.title.downcase %>Client First Name*</span></div>
+      <div class="four columns tar inline"><span>Client First Name*</span></div>
       <div class="six columns">
         <%= form.text_field :client_first_name %>
       </div>
@@ -109,30 +96,7 @@
         <%= form.text_field :country %>
       </div>
     </div>
-    
-    <div class="row">
-      <div class="four columns tar inline"><span>Insurance</span></div>
-      <div class="six columns">
-        <%= form.text_field :insurance %>
-      </div>
-    </div>
-    
-    <div class="row">
-      <div class="four columns tar inline"><span>Preferred Location*</span></div>
-      <div class="six columns">
-        <%= form.select(:location, '
-                                <option value="Not Selected"></option>
-                                <option value="Asheville">Asheville</option>
-                                <option value="Cary">Cary</option>
-                                <option value="Chapel Hill">Chapel Hill</option>
-                                <option value="Durham">Durham</option>
-                                <option value="Mebane">Mebane</option>
-                                <option value="Raleigh">Raleigh</option>
-                                <option value="Wake Forest">Wake Forest</option>
-                                ') %>
-      </div>
-    </div>
-    
+            
     <div class="row">
       <div class="four columns tar inline"><span>Best Time to Contact</span></div>
       <div class="six columns">
@@ -157,7 +121,7 @@
     <div class="row">
       <div class="four columns5 tar inline"></div>
       <div class="six columns5">
-        <%= form.submit "Send to Dr. Parkes' Inbox" %>
+        <%= form.submit "Send" %>
       </div>
     </div>
   <% end %>

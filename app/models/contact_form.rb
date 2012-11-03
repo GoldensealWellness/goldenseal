@@ -1,4 +1,4 @@
 class ContactForm < ActiveRecord::Base
-      validates :first_name, :last_name, :location, :email, :telephone, :attention, :message, :presence => true
+      validates :first_name, :last_name, :email, :telephone, :message, :presence => true
   
 end

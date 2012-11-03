@@ -4,16 +4,6 @@
         <h3>Please Enter Your Information Below:</h3>
         <p>All fields are required.</p>
       </div>
-    <div class="row">
-      <div class="four columns tar inline"><span>Location</span></div>
-      <div class="six columns">
-        <%= form.select(:location, '
-                              <option value="Not Selected"></option>
-                              <option value="Charlotte Location">Charlotte Location</option>
-                              <option value="Raleigh Location">Raleigh Location</option>
-                              ') %>
-      </div>
-    </div>
 
     <div class="row">
       <div class="four columns tar inline"><span>First Name</span></div>
@@ -42,20 +32,7 @@
         <%= form.telephone_field :telephone %>
       </div>
     </div>
-    
-    <div class="row">
-      <div class="four columns tar inline"><span>Attention</span></div>
-      <div class="six columns">
-        <%= form.select(:attention, '
-                                <option value="Not Selected"></option>
-                                <option value="New Patients">New Patients</option>
-                                <option value="Established Patients">Established Patients</option>
-                                <option value="Other Services">Other Services</option>
-                                <option value="General Questions">General Questions</option>
-                                ') %>
-      </div>
-    </div>
-    
+        
     <div class="row">
       <div class="four columns tar inline"><span>Message</span></div>
       <div class="six columns">
@@ -73,7 +50,7 @@
     <div class="row">
       <div class="four columns5 tar inline"></div>
       <div class="six columns5">
-        <%= form.submit "Send to Dr. Parkes' Inbox" %>
+        <%= form.submit "Send" %>
       </div>
     </div>
   <% end %>

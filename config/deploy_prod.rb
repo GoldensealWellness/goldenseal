@@ -6,9 +6,9 @@ set :user, 'spree'
 set :group, 'www-data'
 set :rails_env, 'production'
 
-role :web, '50.116.46.129'
-role :app, '50.116.46.129'
-role :db,  '50.116.46.129', :primary => true
+role :web, '66.228.62.131'
+role :app, '66.228.62.131'
+role :db,  '66.228.62.131', :primary => true
 
 set :scm, :git
 set :repository,  "git://github.com/kyleries/goldenseal.git"
@@ -50,7 +50,7 @@ namespace :deploy do
     run "ln -nfs #{shared_path}/config/solr.sh #{release_path}/solr.sh"
     run "ln -nfs #{shared_path}/config/.foreman #{release_path}/.foreman"
     run "ln -nfs #{shared_path}/spree #{release_path}/public/spree" 
-    run "ln -nfs #{shared_path}/uploads #{release_path}/public/uploads"
+    run "ln -nfs #{shared_path}/uploads #{release_path}/public/uploads" 
   end
 end
 

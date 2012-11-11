@@ -6,9 +6,9 @@ set :user, 'spree'
 set :group, 'www-data'
 set :rails_env, 'production'
 
-role :web, '198.58.101.63'
-role :app, '198.58.101.63'
-role :db,  '198.58.101.63', :primary => true
+role :web, '66.228.62.131'
+role :app, '66.228.62.131'
+role :db,  '66.228.62.131', :primary => true
 
 set :scm, :git
 set :repository,  "git://github.com/kyleries/goldenseal.git"
@@ -23,7 +23,7 @@ set :ssh_options, { :forward_agent => true }
 namespace :foreman do
   desc "Export the Procfile to Ubuntu's upstart scripts"
   task :export, :roles => :app do
-    run "cd #{current_path} && bundle exec foreman export upstart /etc/init"
+    run "cd #{current_path} && bundle exec foreman export upstart /etc/init -a #{application}  -u spree"
   end
 
   desc "Start the application services"
@@ -48,9 +48,8 @@ namespace :deploy do
     run "ln -nfs #{shared_path}/config/database.yml #{release_path}/config/database.yml"
     run "ln -nfs #{shared_path}/config/Procfile #{release_path}/Procfile"
     run "ln -nfs #{shared_path}/config/solr.sh #{release_path}/solr.sh"
-    run "ln -nfs #{shared_path}/config/.foreman #{release_path}/.foreman"
     run "ln -nfs #{shared_path}/spree #{release_path}/public/spree" 
-    run "ln -nfs #{shared_path}/uploads #{release_path}/public/uploads"
+    run "ln -nfs #{shared_path}/uploads #{release_path}/public/uploads" 
   end
 end
 

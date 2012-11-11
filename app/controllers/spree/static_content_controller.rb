@@ -26,7 +26,7 @@ class Spree::StaticContentController < Spree::BaseController
   
   def create
     @intake_info = IntakeInfo.new(params[:intake_info])
-    if verify_recaptcha(:private_key => "6LeDndcSAAAAAOayCRACYBZ9y7pe0pOXFgI1C1lT") 
+    if verify_recaptcha(:private_key => "6LduldgSAAAAAFwtnFSCJz_BJ_P45t19U7VmTOq7") 
       if @intake_info.save
         IntakeInfoMailer.intake_email(@intake_info).deliver
         flash[:success] = "Thanks for your message!"
@@ -43,7 +43,7 @@ class Spree::StaticContentController < Spree::BaseController
   
   def contact_form
     @contact_form = ContactForm.new(params[:contact_form])
-    if verify_recaptcha(:private_key => "6LeDndcSAAAAAOayCRACYBZ9y7pe0pOXFgI1C1lT") 
+    if verify_recaptcha(:private_key => "6LduldgSAAAAAFwtnFSCJz_BJ_P45t19U7VmTOq7") 
       if @contact_form.save
         ContactFormMailer.contact_email(@contact_form).deliver
         flash[:success] = "Thanks for your message!"

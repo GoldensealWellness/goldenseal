@@ -7,8 +7,9 @@ GIT
       spree_essentials (~> 0.4.0.rc3)
 
 GIT
-  remote: git://github.com/dcrec1/acts_as_solr_reloaded.git
-  revision: 745cdcd466c209ed4f736f11973e9d43ce1610d2
+  remote: git://github.com/evrone/acts_as_solr_reloaded.git
+  revision: 7c753d7887c01a60fe111bb7008eb84a68a92f7a
+  branch: ar_namespace_support
   specs:
     acts_as_solr_reloaded (1.6.0)
 

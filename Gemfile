@@ -50,6 +50,7 @@ gem 'spree_flat_in_range',
   :git => 'git://github.com/kyleries/spree_flat_in_range.git'
 gem 'spree_solr_search', 
   :git => 'git://github.com/romul/spree-solr-search.git'
-gem 'acts_as_solr_reloaded', 
-  :git => 'git://github.com/dcrec1/acts_as_solr_reloaded.git', 
+gem 'acts_as_solr_reloaded',
+  :git => 'git://github.com/evrone/acts_as_solr_reloaded.git', 
+  :branch => "ar_namespace_support"
   

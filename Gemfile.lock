@@ -7,13 +7,6 @@ GIT
       spree_essentials (~> 0.4.0.rc3)
 
 GIT
-  remote: git://github.com/evrone/acts_as_solr_reloaded.git
-  revision: 7c753d7887c01a60fe111bb7008eb84a68a92f7a
-  branch: ar_namespace_support
-  specs:
-    acts_as_solr_reloaded (1.6.0)
-
-GIT
   remote: git://github.com/kyleries/spree_address_book.git
   revision: e651fc0ed8818d2b9807a3151545e7d6b42ffe02
   branch: 1-0-stable
@@ -166,6 +159,7 @@ GEM
     acts-as-taggable-on (2.2.2)
       rails (~> 3.0)
     acts_as_list (0.1.4)
+    acts_as_solr_reloaded (1.6.0)
     akami (1.0.0)
       gyoku (>= 0.4.0)
     arel (2.2.3)
@@ -335,7 +329,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  acts_as_solr_reloaded!
   capistrano
   coffee-rails
   foreman
